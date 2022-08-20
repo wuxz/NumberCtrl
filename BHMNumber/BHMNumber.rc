@@ -1,0 +1,230 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""BHMNumber.tlb""\r\n"
+    "#include ""afxctl.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "BHM\0"
+            VALUE "FileDescription", "BHMNumber ActiveX Control Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "BHMNumber\0"
+            VALUE "LegalCopyright", "Copyright (C) 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "BHMNumber.OCX\0"
+            VALUE "ProductName", "BHMNumber ActiveX Control Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUTDLL            ICON    DISCARDABLE     "BHMNumber.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BHMNUMBER           BITMAP  DISCARDABLE     "BHMNumberCtl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_BHMNUMBER DIALOG DISCARDABLE  34, 22, 260, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BHMNumber Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,20,20
+    LTEXT           "BHMNumber Control, Version 1.0",IDC_STATIC,40,10,170,8
+    LTEXT           "Copyright (C) 1999, BHM",IDC_STATIC,40,25,170,8
+    DEFPUSHBUTTON   "OK",IDOK,221,7,32,14,WS_GROUP
+END
+
+IDD_PROPPAGE_BHMNUMBER DIALOG DISCARDABLE  0, 0, 250, 86
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Appearance:",IDC_STATIC,8,13,51,8
+    COMBOBOX        IDC_COMBO_APPEARANCE,59,12,66,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Ali&gnment",IDC_STATIC,8,41,51,8
+    COMBOBOX        IDC_COMBO_ALIGNMENT,59,39,66,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&DisplayMask:",IDC_STATIC,8,65,50,10
+    COMBOBOX        IDC_COMBO_DISPLAYMASK,59,63,66,60,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Mask:",IDC_STATIC,140,13,40,10
+    EDITTEXT        IDC_EDIT_MASK,196,12,45,15,ES_AUTOHSCROLL
+    LTEXT           "&Value:",IDC_STATIC,140,41,40,10
+    EDITTEXT        IDC_EDIT_VALUE,196,39,45,15,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX_BHMNUMBER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PROPPAGE_BHMNUMBER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_BHMNUMBER DLGINIT
+BEGIN
+    IDC_COMBO_APPEARANCE, 0x403, 9, 0
+0x2030, 0x202d, 0x6c46, 0x7461, "\000" 
+    IDC_COMBO_APPEARANCE, 0x403, 7, 0
+0x2031, 0x202d, 0x4433, "\000" 
+    IDC_COMBO_ALIGNMENT, 0x403, 9, 0
+0x2030, 0x202d, 0x654c, 0x7466, "\000" 
+    IDC_COMBO_ALIGNMENT, 0x403, 10, 0
+0x2031, 0x202d, 0x6952, 0x6867, 0x0074, 
+    IDC_COMBO_ALIGNMENT, 0x403, 11, 0
+0x2032, 0x202d, 0x6543, 0x746e, 0x7265, "\000" 
+    IDC_COMBO_DISPLAYMASK, 0x403, 8, 0
+0x2324, 0x283b, 0x2324, 0x0029, 
+    IDC_COMBO_DISPLAYMASK, 0x403, 12, 0
+0x7055, 0x2320, 0x443b, 0x776f, 0x206e, 0x0023, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BHMNUMBER           "BHMNumber Control"
+    IDS_BHMNUMBER_PPG       "BHMNumber Property Page"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BHMNUMBER_PPG_CAPTION "General"
+    IDS_APPEARANCE_FLAT     "0 - Flat"
+    IDS_APPEARANCE_3D       "1 - 3D"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "BHMNumber.tlb"
+#include "afxctl.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

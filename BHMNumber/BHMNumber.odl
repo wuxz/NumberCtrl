@@ -1,0 +1,92 @@
+// BHMNumber.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (BHMNumber.tlb) that will become a resource in
+// BHMNumber.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(B07953A2-7FF6-11D3-A7FE-0080C8763FA4), version(1.0),
+  helpfile("BHMNumber.hlp"),
+  helpstring("BHMNumber ActiveX Control module"),
+  control ]
+library BHMNUMBERLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+    typedef enum _Alignment{
+        AlignmentLeft = 0,
+        AlignmentRight = 1,
+        AlignmentCenter = 2
+    } Constants_Alignment;
+
+	//  Primary dispatch interface for CBHMNumberCtrl
+
+	[ uuid(B07953A3-7FF6-11D3-A7FE-0080C8763FA4),
+	  helpstring("Dispatch interface for BHMNumber Control"), hidden ]
+	dispinterface _DBHMNumber
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CBHMNumberCtrl)
+			[id(DISPID_APPEARANCE), bindable, requestedit] short Appearance;
+			[id(DISPID_FONT), bindable] IFontDisp* Font;
+			[id(1), helpstring("Gets/sets the mask used to display when has not input focus.\nThe format is:\nPrefix+#+Suffix.\nUse ; to seperate the two masks which is used for positive and negative value respectively.\nFor example:$#;($#)")] BSTR DisplayMask;
+			[id(2), helpstring("Gets/sets the mask used to input data.\nEach # is on digit.\nFor example: ###.## The you will get 3 integral digits and two decimal digits.")] BSTR Mask;
+			[id(3), helpstring("Gets the text be shown")] BSTR Text;
+			[id(4), helpstring("Gets/sets the value underlying")] double Value;
+			[id(0)] double _Value;
+			[id(5), helpstring("Gets/sets the background color ")] OLE_COLOR BackColor;
+			[id(6), helpstring("Gets/sets the text color when the value is positive or zero")] OLE_COLOR ForeColor;
+			[id(7), helpstring("Gets/sets the text color when the value is negative")] OLE_COLOR NegativeColor;
+			[id(8), helpstring("Gets/sets the text alignment")] Constants_Alignment Alignment;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CBHMNumberCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CBHMNumberCtrl
+
+	[ uuid(B07953A4-7FF6-11D3-A7FE-0080C8763FA4),
+	  helpstring("Event interface for BHMNumber Control") ]
+	dispinterface _DBHMNumberEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CBHMNumberCtrl)
+			[id(DISPID_CLICK)] void Click();
+			[id(DISPID_DBLCLICK)] void DblClick();
+			[id(DISPID_KEYDOWN)] void KeyDown(short* KeyCode, short Shift);
+			[id(DISPID_KEYPRESS)] void KeyPress(short* KeyAscii);
+			[id(DISPID_KEYUP)] void KeyUp(short* KeyCode, short Shift);
+			[id(DISPID_MOUSEMOVE)] void MouseMove(short Button, short Shift, OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CBHMNumberCtrl
+
+	[ uuid(B07953A5-7FF6-11D3-A7FE-0080C8763FA4), licensed,
+	  helpstring("BHMNumber Control"), control ]
+	coclass BHMNumber
+	{
+		[default] dispinterface _DBHMNumber;
+		[default, source] dispinterface _DBHMNumberEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
